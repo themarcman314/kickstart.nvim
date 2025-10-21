@@ -173,6 +173,8 @@ vim.o.confirm = true
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+vim.keymap.set('i', '<C-Space>', '<C-x><C-o>', { buffer = true, noremap = true, silent = true })
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
@@ -675,7 +677,9 @@ require('lazy').setup({
       local servers = {
         clangd = {},
         -- gopls = {},
-        -- pyright = {},
+        pyright = {},
+        texlab = {},
+
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -1013,6 +1017,9 @@ require('lazy').setup({
     },
   },
 })
-
+vim.api.nvim_create_autocmd('BufWritePost', {
+  pattern = '*.tex',
+  command = '!latexmk -pdf %',
+})
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
