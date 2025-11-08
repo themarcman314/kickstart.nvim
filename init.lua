@@ -52,10 +52,7 @@ Kickstart Guide:
       - <enter key>
 
     (If you already know the Neovim basics, you can skip this step.)
-
-  Once you've completed that, you can continue working through **AND READING** the rest
-  of the kickstart init.lua.
-
+Once you've completed that, you can continue working through **AND READING** the rest of the kickstart init.lua.
   Next, run AND READ `:help`.
     This will open up a help window with some basic information
     about reading, navigating and searching the builtin help documentation.
@@ -1025,3 +1022,4 @@ vim.api.nvim_create_autocmd('BufWritePost', {
 vim.opt.spelllang = { 'fr' }
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+vim.opt.modeline = false
