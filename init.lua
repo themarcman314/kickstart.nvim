@@ -185,7 +185,9 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 vim.keymap.set('n', '<leader>t', ':botright split | terminal<CR>', { desc = 'Open Terminal' })
-vim.keymap.set('n', '<leader>m', ':botright split | terminal make run<CR>i', { desc = 'Open Terminal' })
+vim.keymap.set('n', '<leader>mr', ':botright split | terminal make run<CR>i', { desc = 'run program' })
+vim.keymap.set('n', '<leader>mu', ':make uml<CR>', { desc = 'compile uml' })
+vim.keymap.set('n', '<leader>ma', ':make<CR>', { desc = 'make all' })
 
 -- TIP: Disable arrow keys in normal mode
 -- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
