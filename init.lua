@@ -255,9 +255,9 @@ require('lazy').setup({
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
   {
     'MeanderingProgrammer/render-markdown.nvim',
-    ft = { 'markdown', 'codecompanion' },
+    --ft = { 'markdown', 'codecompanion' },
   },
-  'Thiago4532/mdmath.nvim',
+  --'Thiago4532/mdmath.nvim',
   {
     'milanglacier/minuet-ai.nvim',
     config = function()
@@ -289,7 +289,7 @@ require('lazy').setup({
           auto_trigger_ft = { 'c', 'python' },
           keymap = {
             -- accept whole completion
-            accept = '<C-Y>',
+            accept = '<A-Y>',
             -- accept one line
             accept_line = '<C-y>',
             -- accept n lines (prompts for number)
