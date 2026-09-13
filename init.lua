@@ -184,8 +184,8 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-vim.keymap.set('n', '<leader>t', ':botright split | terminal<CR>', { desc = 'Open Terminal' })
-vim.keymap.set('n', '<leader>mr', ':botright split | terminal make run<CR>i', { desc = 'run program' })
+vim.keymap.set('n', '<leader>t', ':botright split | terminal<CR>i', { desc = 'Open Terminal' })
+vim.keymap.set('n', '<leader>mr', ':make run<CR>', { desc = 'run program' })
 vim.keymap.set('n', '<leader>mu', ':make uml<CR>', { desc = 'compile uml' })
 vim.keymap.set('n', '<leader>ma', ':make<CR>', { desc = 'make all' })
 
